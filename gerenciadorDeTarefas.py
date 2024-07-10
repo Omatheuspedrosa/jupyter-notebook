@@ -14,10 +14,14 @@ print('----------------------------------------')
 
 tarefas = []
 tarefasDic = {}
+concluidas = []
+naoConcluidas = []
+opcoesValidas = (1, 2, 3, 4, 5, 6, 7)
 sair = False
 
 while sair == False:
     opcao = int(input("Escolha uma opção: "))
+
     if opcao == 1:
         ft.adicionarTarefa(tarefas, tarefasDic)
         print(tarefas)
@@ -31,6 +35,13 @@ while sair == False:
 
     if opcao == 4:
         print(tarefas)
+    
+    if opcao == 5:
+        ft.listarConcluidas(tarefasDic, concluidas)
+    
+    if opcao == 6:
+        ft.listarNaoConcluidas(tarefasDic, naoConcluidas)
 
     if opcao == 7:
+        print("Programa finalizado!")
         sair = True

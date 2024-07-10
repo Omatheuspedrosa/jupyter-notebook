@@ -13,3 +13,15 @@ def checkTarefa(tarefasDic):
     tarefa = input("Digite o nome da tarefa para marcar como conluída: ")
     tarefasDic.update({tarefa: "Concluída"})
     print(tarefasDic)
+
+def listarConcluidas(tarefasDic, concluidas):
+    for tarefa, status in tarefasDic.items():
+        if status == "Concluída":
+            concluidas.append(tarefa)
+    return print(concluidas)
+
+def listarNaoConcluidas(tarefasDic, naoConcluidas):
+    for tarefa, status in tarefasDic.items():
+        if status == "Não Concluída":
+            naoConcluidas.append(tarefa)
+    return print(naoConcluidas)
