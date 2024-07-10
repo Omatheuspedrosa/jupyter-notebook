@@ -14,8 +14,6 @@ print('----------------------------------------')
 
 tarefas = []
 tarefasDic = {}
-concluidas = []
-naoConcluidas = []
 opcoesValidas = ("1", "2", "3", "4", "5", "6", "7")
 sair = False
 
@@ -38,14 +36,15 @@ while sair == False:
 
         if opcao == 4:
             print('------Minhas Tarefas------')
-            print(tarefas)
+            for tarefa, status in tarefasDic.items():
+                print(f"{tarefa}: {status}")
             print('--------------------------')
         
         if opcao == 5:
-            ft.listarConcluidas(tarefasDic, concluidas)
+            ft.listarConcluidas(tarefasDic)
         
         if opcao == 6:
-            ft.listarNaoConcluidas(tarefasDic, naoConcluidas)
+            ft.listarNaoConcluidas(tarefasDic)
 
         if opcao == 7:
             print("Programa finalizado!")
