@@ -1,7 +1,7 @@
 import funcoestarefas as ft
 
 print('\n------------------Menu------------------')
-print('''
+print('''\033[36m
       1. Adicionar Tarefa
       2. Remover Tarefa
       3. Marcar Tarefa como Concluída
@@ -9,7 +9,7 @@ print('''
       5. Listar Tarefas Concluídas 
       6. Listar Tarefas Não Concluídas 
       7. Sair 
-      ''')
+      \033[m''')
 print('----------------------------------------')
 
 tarefas = []
